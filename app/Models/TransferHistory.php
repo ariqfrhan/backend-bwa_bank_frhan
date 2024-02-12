@@ -9,7 +9,7 @@ class TransferHistory extends Model
 {
     use HasFactory;
 
-    protected $table = 'transaction_histories';
+    protected $table = 'transfer_histories';
 
     protected $fillable = [
         'sender_id',
