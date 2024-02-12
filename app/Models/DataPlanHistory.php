@@ -12,7 +12,7 @@ class DataPlanHistory extends Model
     protected $table = 'data_plan_histories';
 
     protected $fillable = [
-        'data_plan',
+        'data_plan_id',
         'transaction_id',
         'phone_number',
     ];
