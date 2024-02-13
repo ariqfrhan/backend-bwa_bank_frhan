@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\Api\PaymentMethodController;
+use App\Http\Controllers\Api\TipController;
 use App\Http\Controllers\Api\TopUpController;
 use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\TransferController;
 use App\Http\Controllers\Api\TransferHistoryController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\WebhookController;
+
 use App\Http\Controllers\OperatorCardController;
 use App\Http\Controllers\WalletController;
 use Illuminate\Http\Request;
@@ -54,4 +56,7 @@ Route::group(['middleware' => 'jwt.verify'], function($router){
     // Wallet
     Route::get('wallets', [WalletController::class, 'show']);
     Route::put('wallets', [WalletController::class, 'update']);
+
+    // Tips
+    Route::get('tips', [TipController::class, 'index']);
 });
